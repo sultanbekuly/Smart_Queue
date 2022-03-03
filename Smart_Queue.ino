@@ -7,6 +7,10 @@
 #include <UniversalTelegramBot.h>   // Universal Telegram Bot Library written by Brian Lough: https://github.com/witnessmenow/Universal-Arduino-Telegram-Bot
 #include <ArduinoJson.h>
 
+#include <Servo.h>
+Servo myservo;
+
+
 // Replace with your network credentials
 const char* ssid = "";      //wifi name
 const char* password = "";  //wifi password
@@ -27,8 +31,6 @@ int botRequestDelay = 100;
 unsigned long lastTimeBotRan;
 
 
-#include <Servo.h>
-Servo myservo;
 int servo_pin = 14;//servo pin
 int servo_locked_value = 180;
 int servo_unlocked_value = 30;
