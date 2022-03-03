@@ -39,7 +39,7 @@ const int ledPin = 2;
 //bool ledState = LOW;
 
 String queue[10] ={};//array of queue
-int queue_array_len = 0;//index of queue
+int queue_array_len = 0;//len of queue
 bool room_is_free = true;//initially the room is free
 bool door_is_locked = true;// the door is locked
 
