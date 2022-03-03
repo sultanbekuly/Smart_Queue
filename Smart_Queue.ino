@@ -8,11 +8,11 @@
 #include <ArduinoJson.h>
 
 // Replace with your network credentials
-const char* ssid = "Huawei215";
-const char* password = "40214215";
+const char* ssid = "";      //wifi name
+const char* password = "";  //wifi password
 
 // Initialize Telegram BOT
-#define BOTtoken "566993006:AAHA4xQqUiNeGIBdXahEOfpB6dhAkmd2uD8"  // your Bot Token (Get from Botfather)
+#define BOTtoken "XXXXXXXXX:XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX"  // your Bot Token (Get from Botfather)
 
 
 #ifdef ESP8266
@@ -97,13 +97,6 @@ void handleNewMessages(int numNewMessages) {
         queue[queue_array_len] = chat_id;//array of queue
         queue_array_len++;
         bot.sendMessage(chat_id, "You joined the queue.", "");
-        //check if the room free
-        /*if(room_is_free){
-          room_is_free = false;
-          //invite to the room:
-          Serial.println("Invinting to the room"+queue[0]);
-          bot.sendMessage(chat_id, "The room is free! \n Please come and send /unlock_the_door_from_outside to unlock the door.", "");
-        }*/
       }else{
         bot.sendMessage(chat_id, "You are already in the queue.", "");
       }
