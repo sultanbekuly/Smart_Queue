@@ -87,7 +87,6 @@ void handleNewMessages(int numNewMessages) {
     }
 
     if (text == "/options") {
-      //String keyboardJson = "[[\"/Unlock\", \"/Lock\"],[\"/WC\"],[\"/cancel\", \"/status\"]]";
       String keyboardJson = "[[\"/Stand_in_line\"],[\"/cancel\", \"/status\"]]";
       bot.sendMessageWithReplyKeyboard(chat_id, "Here is my options:", "", keyboardJson, true);
     }
